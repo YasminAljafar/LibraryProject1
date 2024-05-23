@@ -1,14 +1,4 @@
+<app-category></app-category>
+<router-outlet></router-outlet>
+  
 
-  <label for="category">Category:</label>
-<select id="category" [(ngModel)]="selectedCategory" (change)="getBooksByCategory()">
-  <option *ngFor="let category of categories" [value]="category.Id">
-    {{ category.Name }}
-  </option>
-</select>
-
-<label for="book">Book:</label>
-<select id="book" [(ngModel)]="selectedBook">
-  <option *ngFor="let book of books" [value]="book.Id">
-    {{ book.Title }}
-  </option>
-</select>

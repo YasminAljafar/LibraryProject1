@@ -9,31 +9,12 @@ import { Books } from './Books';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent  {
 
   title = 'LibraryProject';
-  categories!: Categories[] ;
-  books!: Books[] ;
-  selectedCategory!: number;
-  selectedBook!: number;
-  bookService: any;
-
-  constructor(private bookservice: CategoryAndBookService) {}
-
-  ngOnInit() {
-    this.getCategories();
+  
   }
 
-  getCategories() {
-    this.bookservice.getCategories().subscribe((categories:any) => {
-      this.books = categories.books;
-    });
-  }
+ 
 
-  getBooksByCategory() {
-    this.bookService.getBooksByCategory(this.selectedCategory).subscribe((books:any) => {
-      this.books = books;
-    });
-  }
-}
 
