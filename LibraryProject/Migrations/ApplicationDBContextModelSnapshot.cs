@@ -46,7 +46,7 @@ namespace LibraryProject.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Books");
+                    b.ToTable("Books", (string)null);
                 });
 
             modelBuilder.Entity("LibraryProject.Models.Category", b =>
@@ -62,7 +62,7 @@ namespace LibraryProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("LibraryProject.Models.Book", b =>

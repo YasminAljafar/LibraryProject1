@@ -18,9 +18,9 @@ namespace LibraryProject.Controllers
 
 
         [HttpGet]
-        public async Task<List<Category>> GetAll() 
+        public async Task<ActionResult<IEnumerable<Category>>> GetAll() 
         { 
-            return await _context.Set<Category>().Include(c=>c.Books).ToListAsync();
+            return await _context.Categories.Include(c=>c.Books).ToListAsync();
         }
     }
 }

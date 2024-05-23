@@ -6,7 +6,7 @@
         public string? Title { get; set; }
      //   public string? Description { get; set; }
         public string? Author { get; set; }
-        public int  CreatoryId { get; set; }
-        public Category? Category { get; set; }
+        public int  CategoryId { get; set; }
+        public Category Category { get; set; }
     }
 }

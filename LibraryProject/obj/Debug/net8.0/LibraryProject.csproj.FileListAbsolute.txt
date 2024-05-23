@@ -141,3 +141,7 @@ C:\Users\yasmin\source\repos\LibraryProject\LibraryProject\bin\Debug\net8.0\Libr
 C:\Users\yasmin\source\repos\LibraryProject\LibraryProject\bin\Debug\net8.0\LibraryFrontEnd\LibraryProject\tsconfig.json
 C:\Users\yasmin\source\repos\LibraryProject\LibraryProject\bin\Debug\net8.0\LibraryFrontEnd\LibraryProject\tsconfig.spec.json
 C:\Users\yasmin\source\repos\LibraryProject\LibraryProject\obj\Debug\net8.0\LibraryProject.sourcelink.json
+C:\Users\yasmin\source\repos\LibraryProject\LibraryProject\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\yasmin\source\repos\LibraryProject\LibraryProject\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\yasmin\source\repos\LibraryProject\LibraryProject\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\yasmin\source\repos\LibraryProject\LibraryProject\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll

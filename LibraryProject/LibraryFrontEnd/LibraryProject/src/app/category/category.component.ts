@@ -19,14 +19,15 @@ export class CategoryComponent implements OnInit {
     }
   getCategories() {
     this.bookservice.getCategories().subscribe((categories:any) => {
-      this.categories = categories;
-      this.books = categories.books;
+     this.categories = categories;
+    // this.books = categories.books;
       console.log(categories);
     },
     ex=>console.log(ex))
     };
 
 getBooksByCategory() {
+  if(this.selectedCategory)
   this.bookservice.getBooksByCategory(this.selectedCategory).subscribe((books:any) => {
     this.books = books;
   });

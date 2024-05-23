@@ -36,20 +36,24 @@ namespace LibraryProject.Controllers
         [HttpGet("{categoryId}")]
         public async Task<IActionResult> GetBooksByCategorId(int categoryId)
         {
-             var books=  await _context.Set<Book>().Where(b=>b.CreatoryId==categoryId).ToListAsync();
+             var books=  await _context.Set<Book>().Where(b=>b.CategoryId==categoryId).ToListAsync();
             return Ok(books);
         }
 
 
         [HttpPost]
-        public async Task<ActionResult<Book>> AddAsync(CreateBook creatBook)
+        public async Task<ActionResult<Book>> AddAsync(CreateBook creatBook, int categoryId)
         {
-            var category=await _context.Set<Category>().FindAsync(creatBook.CategoryId);
+            var category=await _context.Categories.FindAsync(categoryId);
+            if (category==null)
+            {
+                return NotFound($"Ctegory with id {categoryId} not founf");
+            }
             var book = new Book()
             {
                 Title = creatBook.Title,
                 Author=creatBook.Author,
-                CreatoryId=creatBook.CategoryId
+                CategoryId=categoryId
             };
 
              _context.Books.Add(book);
